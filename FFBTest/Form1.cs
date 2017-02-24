@@ -55,7 +55,10 @@ namespace FFBTest
                 //Add all force feedback devices to cboxDevices and create DInputHandlers for them
                 int devIdx = 0;
                 foreach (DeviceInstance ffbDev in deviceList)
+                {
                     HandleFFBDevice(ffbDev, devIdx);
+                    devIdx++;
+                }
 
                 cboxDevices.SelectedIndex = 0; //Select first device in the list
             }
